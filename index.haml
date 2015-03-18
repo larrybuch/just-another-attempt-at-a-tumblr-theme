@@ -24,20 +24,22 @@
       search
     .posts
       / #(Posts)
-      .post
-        .date
-          02.03.04
-        %h2
-          %a{href: '#'} !(Title)
-        .text
-          !(Body)
-          %img{src:'!(PhotoURL-500)'}
-        .tags
-          %ul
-            %a{href: '#'}
-              %li tag me
-            %a{href: '#'}
-              %li tag me again
+        /#(Photo)
+        .post
+          .date
+            02.03.04
+          %h2
+            %a{href: '#'} !(Title)
+          .text
+            !(Body)
+            %img{src:'!(PhotoURL-500)'}
+          .tags
+            %ul
+              %a{href: '#'}
+                %li tag me
+              %a{href: '#'}
+                %li tag me again
+        /##
       / ##
     .footer
       &copy; yo
