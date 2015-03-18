@@ -1,0 +1,45 @@
+%html
+  %head
+    %title
+      !(Title)
+  %link{href: "css/reset.css", rel: "stylesheet"}
+  %link{href: "css/style.css", rel: "stylesheet"}
+
+  .container
+    .header
+      %h1 Larry Buchanan
+      .nav
+        %ul
+          %li
+            %a.current{href: '#'} Filing Cabinet
+          %li
+            %a{href: '#'} Ideas
+          %li
+            %a{href: '#'} Lab
+          %li
+            %a{href: '#'} Log
+          %li
+            %a{href: '#'} The Goods
+    .search
+      search
+    .posts
+      / #(Posts)
+      .post
+        .date
+          02.03.04
+        %h2
+          %a{href: '#'} !(Title)
+        .text
+          !(Body)
+          %img{src:'!(PhotoURL-500)'}
+        .tags
+          %ul
+            %a{href: '#'}
+              %li tag me
+            %a{href: '#'}
+              %li tag me again
+      / ##
+    .footer
+      &copy; yo
+
+
