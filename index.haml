@@ -24,24 +24,18 @@
       search
     .posts
       / #(Posts)
-        /#(Photo)
-        .post
-          .date
-            02.03.04
-          %h2
-            %a{href: '#'} !(Title)
-          .text
-            !(Body)
-            %img{src:'!(PhotoURL-500)'}
-          .tags
-            %ul
-              %a{href: '#'}
-                %li tag me
-              %a{href: '#'}
-                %li tag me again
-        /##
+      .post
+        / #(Date)
+        %h2 !(MonthNumberWithZero).!(DayOfMonthWithZero).!(Year)
+        / ##
+        / #(HasTags)
+        .tags
+          %ul
+            / #(Tags)
+            %li
+              %a{href: '!(TagURL)'} !(Tag)
+            / ##
+        / ## 
       / ##
     .footer
       &copy; yo
-
-
