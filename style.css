@@ -1,0 +1,131 @@
+/* +(src: "style.css") */
+
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  font-family: 'Source Code Pro', code, serif;
+  font-weight: 300;
+  line-height: 1.75;
+  padding: 30px 40px;
+}
+
+.container {
+  max-width: 640px;
+  /*margin: 0 auto;*/
+}
+
+.header {
+  font-size: 12px;
+  margin-bottom: 60px;
+}
+
+
+h1 {
+  margin-right: 40px;
+}
+
+.nav li {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 1px solid #aaa;
+}
+
+.nav li:first-child {
+  border-left: 0px;
+}
+
+h1, .nav, .nav ul {
+  display: inline;
+}
+
+.nav li, .tags li {
+  display: inline;
+}
+
+.nav li a, .tags a, h2 a, p a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav li a.current {
+  padding-bottom: 2px;
+  border-bottom: 4px solid #efefef;
+}
+
+.nav li a:hover {
+  padding-bottom: 2px;
+  border-bottom: 4px solid #ffff00;
+}
+
+.search {
+  margin-bottom: 60px;
+  background-color: #efefef;
+  padding: 50px;
+  color: rgba(0,0,0,.2);
+}
+
+.post {
+  margin-bottom: 100px;
+}
+
+.post img {
+  max-width: 100%;
+}
+
+.date {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+h2 a {
+  padding-bottom: 4px;
+  border-bottom: 6px solid #efefef;
+}
+
+p a {
+  padding-bottom: 2px;
+  border-bottom: 4px solid #efefef;
+}
+
+h2 a:hover, p a:hover {
+  border-bottom-color: #ffff00;
+}
+
+.stuff {
+  margin-bottom: 30px;
+}
+
+.text p {
+  margin-bottom: 16px;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tags ul li {
+  box-sizing: border-box;
+  font-size: 12px;
+  background-color: #efefef;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.tags ul li:hover {
+  background-color: #ffff00;
+}
+
+.footer {
+  font-size: 12px;
+}
+
+.source {
+  font-size: 12px;
+  margin: 10px 0;
+}

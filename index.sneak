@@ -1,10 +1,10 @@
 ! 5
 html
   head
-    - PageTitle:
-      title= Title
-    link(href: "css/reset.css", rel: "stylesheet")
-    link(href: "css/style.css", rel: "stylesheet")
+    title {Title}
+
+    link(href: 'reset.css', rel:'stylesheet')
+    link(href: 'style.css', rel:'stylesheet')
   body
     .container
       .header
@@ -26,11 +26,42 @@ html
       .posts
         - Posts:
           .post
-            h2 #{PostType}
+            p.date {MonthNumberWithZero}.{DayOfMonthWithZero}.{Year}
+
             - Title:
-              h1 #{Title}
-              p #{Body}
+              h2
+                a(href: '{Permalink}') {Title}
+              .stuff.text
+                p {Body}
+
             - Photo:
-              is here here
+              .stuff.photo
+                img(src:'{PhotoURL-500}')
+                - Caption:
+                  p {Caption}
+
             - Quote:
-              p.quote #{Quote}
+              .stuff.quote
+                p {Quote}
+                p.source {Source}
+
+            - Link:
+              h2
+                a(href: '{URL}') {Name}
+              .stuff.link
+                p {Description}
+
+            - HasTags:
+              .tags
+                ul
+                  - Tags:
+                    a(href: '{TagURL}')
+                      li {Tag}
+
+      - PreviousPage:
+        a(href:'{PreviousPage}') « Previous
+      - NextPage:
+        a(href:'{NextPage}') Next »
+
+      .footer.
+        this is a footer
