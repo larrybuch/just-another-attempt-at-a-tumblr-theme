@@ -25,9 +25,19 @@
     .posts
       / #(Posts)
       .post
+        %h2 !(PostType)
         / #(Date)
-        %h2 !(MonthNumberWithZero).!(DayOfMonthWithZero).!(Year)
+        %p.date !(MonthNumberWithZero).!(DayOfMonthWithZero).!(Year)
         / ##
+
+        / #(Text)
+          %p put stuff here tha this is a text post
+        / ##
+
+        / #(Photo)
+        %img{src:'!(PhotoURL-500)'}
+        / ##
+
         / #(HasTags)
         .tags
           %ul
