@@ -2,7 +2,8 @@
 html
   head
     title {Title}
-
+    link(href: 'reset.css', rel:'stylesheet')
+    link(href: 'style.css', rel:'stylesheet')
   body
     .container
       .header
@@ -62,4 +63,4 @@ html
         a(href:'{NextPage}') Next »
 
       .footer.
-        this is a footer
+        this is a footer andd trying to deploy
